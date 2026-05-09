@@ -4,9 +4,46 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>育てろ！ガチマッチョくん</title>
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <div class="app">
+      <div class="wrap">
+        <header class="headbar">
+          <div>
+            <span class="badge">育成シミュレーション・プロトタイプ</span>
+            <h1>育てろ！ガチマッチョくん</h1>
+            <p class="sub">鍛えろ、食わせろ、休ませろ。拳と胃袋で世界を取れ。</p>
+          </div>
+          <button class="btn" id="reset">↻ 最初から</button>
+        </header>
+
+        <main class="grid">
+          <section class="side">
+            <div id="hero"></div>
+            <div class="card">
+              <h2>コンディション</h2>
+              <p class="sub" id="condition"></p>
+              <div class="stats" id="stats"></div>
+            </div>
+            <div class="card">
+              <h2>称号</h2>
+              <div id="titles"></div>
+            </div>
+          </section>
+
+          <section>
+            <div class="tabs" id="tabs"></div>
+            <div id="result"></div>
+            <div class="actions" id="actions"></div>
+            <div class="card" style="margin-top:16px">
+              <h2>育成ログ</h2>
+              <div class="log" id="log"></div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+    <script src="./game.js"></script>
   </body>
 </html>
